@@ -1,5 +1,6 @@
 const models = require('../models');
-const Domo = models.Domo;
+
+const { Domo } = models;
 
 const makerPage = async (req, res) => {
   try {
@@ -35,7 +36,7 @@ const makeDomo = async (req, res) => {
     }
     return res.status(500).json({ error: 'An error occured making domo!' });
   }
-}
+};
 module.exports = {
   makerPage,
   makeDomo,
